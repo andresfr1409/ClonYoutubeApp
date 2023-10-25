@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <h2 class="fw-bold mb-2 text-uppercase">Restablecer contraseña</h2>
+                            <p class="text-white-50 mb-5">Por favor ingresa tu email y contraseña Nueva</p>
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="form-outline form-white mb-4">
+                                    <div class="form-outline custom-input">
+                                        <label class="form-label" for="username_or_email">Correo Electronico</label>
+                                        <input type="text" id="username_or_email" class="form-control" name="username_or_email" placeholder="Email" required />
+                                    </div>
+                                    <div class="form-outline custom-input">
+                                        <label class="form-label" for="new_password">Contraseña nueva</label>
+                                        <input type="password" id="newPassword" class="form-control my-3" name="new_password" placeholder="Ingresa tu contraseña nueva" required />
+                                    </div>
+                                    <label class="form-label" for="confirm_password">Confirmar contraseña nueva</label>
+                                    <input type="password" id="confirmPassword" class="form-control my-3" name="confirm_password" placeholder="Confirma tu contraseña nueva" required />
+                                </div>
+                                <input type="submit" class="btn btn-outline-light btn-lg px-6" value="Restablecer Contraseña">
+                            </form>
+                            {% if messages %}
+                                <ul class="messages">
+                                    {% for message in messages %}
+                                        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
+{% endblock %}

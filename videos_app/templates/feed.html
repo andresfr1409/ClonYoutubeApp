@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="vh-100 gradient-custom-2">
+    <h2 id="tituloFeed">Videos Subidos</h2>
+    <div class="row mx-1 row-cols-1 row-cols-md-4 g-5">
+        {% if resultados_usuarios %}
+            {% for resultado in resultados_usuarios %}
+                {% if resultado != request.user %}
+                    <div class="col">
+                        <div class="card" id="cardFeed">
+                            <a href="{% url 'perfil_usuario' resultado.username %}">
+                                {% if video.usuario.customuser.imagen_perfil %}
+                                    <img src="{{ video.usuario.customuser.imagen_perfil.url }}"
+                                    id="ImagenCardPerfil"
+                                    alt="Imagen de perfil" 
+                                    class="img-fluid">
+                                {% else %}
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                    id="ImagenCardPerfil"
+                                    alt="Imagen de perfil" 
+                                    class="img-fluid">
+                                {% endif %}
+                                <div class="card-body" id="cuerpoFeed">
+                                    <p id="TituloUsuario">{{ resultado.username }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% if resultados_videos %}
+            {% for video in resultados_videos %}
+                <div class="col">
+                    <div class="card" id="cardFeed">
+                        <a href="{% url 'ver_video' video.id_video %}">
+                            <video width="402" height="203" id="videoFeed">
+                                <source src="{{ video.archivo_video.url }}" type="video/mp4">
+                                Tu navegador no admite la reproducción de videos.
+                            </video>
+                        </a>
+                        <div class="d-flex">
+                            <div class="user-profile-image">
+                                {% if video.usuario.customuser.imagen_perfil %}
+                                    <img src="{{ video.usuario.customuser.imagen_perfil.url }}"
+                                    id="ImagenCard"
+                                    alt="Imagen de perfil" 
+                                    class="img-fluid">
+                                {% else %}
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                    id="ImagenCard"
+                                    alt="Imagen de perfil" 
+                                    class="img-fluid">
+                                {% endif %}
+                            </div>
+                            <div class="card-body" id="cuerpoFeed">
+                                <p id="tituloVideo">{{ video.titulo }}</p>
+                                <p id="usuarioVideo">{{ video.usuario }}</p>
+                            </div>
+                        </div>
+                        <div class="card-footer" id="footerVideo">
+                            <small class="text-body-custom">subido el {{ video.fecha_subida }}</small>
+                        </div>  
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            {% for video in videos %}
+                <div class="col">
+                    <div class="card" id="cardFeed">
+                        <a href="{% url 'ver_video' video.id_video %}">
+                            <video width="402" height="203" id="videoFeed">
+                                <source src="{{ video.archivo_video.url }}" type="video/mp4">
+                                Tu navegador no admite la reproducción de videos.
+                            </video>
+                        </a>
+                        <div class="d-flex">
+                            <div class="user-profile-image">
+                                {% if video.usuario.customuser.imagen_perfil %}
+                                    <img src="{{ video.usuario.customuser.imagen_perfil.url }}"
+                                    id="ImagenCard"
+                                    alt="Imagen de perfil" 
+                                    class="img-fluid">
+                                {% else %}
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                    id="ImagenCard"
+                                    alt="Imagen de perfil" 
+                                    class="img-fluid">
+                                {% endif %}
+                            </div>
+                            <div class="card-body" id="cuerpoFeed">
+                                <p id="tituloVideo">{{ video.titulo }}</p>
+                                <p id="usuarioVideo">{{ video.usuario }}</p>
+                            </div>
+                        </div>
+                        <div class="card-footer" id="footerVideo">
+                            <small class="text-body-custom">subido el {{ video.fecha_subida }}</small>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

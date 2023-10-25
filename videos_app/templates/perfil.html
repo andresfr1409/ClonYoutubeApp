@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="vh-200 gradient-custom-2">
+    <div class="container-fluid py-8 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-20 col-xl-18">
+                <div class="card bg-dark" id="perfil" >
+                    <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height:230px;z-index: 1;position: relative">
+                        {% if usuario.customuser.banner %}
+                            <img src="{{ usuario.customuser.banner.url }}" 
+                            alt="Banner de usuario" 
+                            class="img-fluid" 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        {% else %}
+                            <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024,h_302/https://www.islasas.com/wp-content/uploads/2022/11/banner-blanco-y-negro-2.jpg" 
+                            alt="Banner de usuario" 
+                            class="img-fluid" 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        {% endif %}
+                        <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px; height: 150px">
+                            {% if usuario.customuser.imagen_perfil %}
+                                <img src="{{ usuario.customuser.imagen_perfil.url }}"
+                                alt="Imagen de perfil" 
+                                class="img-fluid img-thumbnail"
+                                style="width: 100%; height: 100%; object-fit: cover; z-index: 1;margin-top: 105px;">
+                            {% else %}
+                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                alt="Imagen de perfil" 
+                                class="img-fluid img-thumbnail"
+                                style="width: 100%; height: 100%; object-fit: cover; z-index: 1;margin-top: 105px;">
+                            {% endif %}
+                            <p class="mb-0"style="z-index: 1" id="BotomEditarPerfil">
+                                <a href="{% url 'editar_perfil' %}" class="btn btn-outline-light">Editar Perfil</a>
+                            </p>
+                        </div>
+                        <div class="ms-3" style="margin-top: 245px;z-index: 1">
+                            <h5>{{ usuario.username }}</h5>
+                            <p>@{{ usuario.username }}</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-white">
+                        <div class="d-flex justify-content-end text-center py-1">
+                            <div>
+                                <p class="mb-1 h5">{{ cantidad_de_videos }}</p>
+                                <p class="small mb-0 ">Videos</p>
+                            </div>
+                            <div class="px-3">
+                                <p class="mb-1 h5">{{ seguidores    }}</p>
+                                <p class="small mb-0">Seguidores</p>
+                            </div>
+                            <div>
+                                <p class="mb-1 h5">{{ seguidos }}</p>
+                                <p class="small mb-0">Seguidos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-5 text-white">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <p class="lead fw-normal mb-0">Videos recientes</p>
+                            <p class="mb-0">
+                                <a href="{% url 'subir_video' %}" class="btn btn-outline-light">Subir un video</a>
+                            </p>
+                        </div>
+                        <div class="row g-2" >
+                            <div class="card bg-dark">
+                                <div class="card-body">
+                                    <h4 class="card-title">Mis Videos</h4>
+                                    <table class="table-responsive custom-table-responsive">
+                                        <thead>
+                                            <th>Titulo</th>
+                                            <th>Video</th>
+                                            <th>Descripcion</th>
+                                            <th>Fecha de subida</th>
+                                            <th>Opciones</th>
+                                        </thead>
+                                        <tbody>
+                                            {% for video in videos %}
+                                            <tr>
+                                                <th>{{video.titulo}}</th>
+                                                <th>
+                                                    <a href="{% url 'ver_video' video.id_video %}" class="btn btn-outline-light">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                                                            <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"></path>
+                                                        </svg>
+                                                        Ver video
+                                                    </a>
+                                                </th>
+                                                <th>{{video.descripcion}}</th>
+                                                <th>{{video.fecha_subida}}</th>
+                                                <th> 
+                                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                                        <a class="btn btn-outline-success" href="{% url 'editar_video' video.id_video%}" role="button">Editar</a> 
+                                                        <a class="btn btn-outline-danger" href="{% url 'eliminar_video' video.id_video%}" role="button" onclick="return confirm('¿Estás seguro de que deseas eliminar permanentemente la película?')">Borrar</a>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

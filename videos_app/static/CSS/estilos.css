@@ -1,0 +1,462 @@
+.gradient-custom-3 {
+    background: #6a11cb;
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+
+.gradient-custom-4 {
+    background: #84fab0;
+    border-radius: 13px;
+    font-size: 25px;
+    border: 2px solid #aff0b5;
+}
+.gradient-custom-4:hover{
+    background: #84fab0;
+}
+
+.gradient-custom-4:active{
+    background: #84fab0;
+    transform: scale(0.95);
+}
+
+.form-outline input {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 500px;
+    transition: border-color 0.3s;
+}
+
+.form-outline input:hover {
+    border-color: #84fab0;
+    box-shadow: 0 0 8px rgb(144, 204, 159);
+}
+
+.form-outline label {
+    padding: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-body{
+    font-family: 'Arial';
+}
+
+.gradient-custom {
+    background: #6a11cb;
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+
+#user.custom-input{
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 420px;
+    transition: border-color 0.3s;
+    color: #ffffff;
+}
+
+#user.custom-input:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgb(116, 116, 116);
+}
+
+#login{
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-color: #ffffff;
+    width: 420px;
+}
+
+#login:hover {
+    border-color: #adadad;
+    box-shadow: 0 0 8px rgb(78, 78, 78);
+}
+
+#login{
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-color: #444444;
+}
+
+#ingresar{
+    margin-bottom: 80px;
+}
+
+.btn-outline-light:active{
+    transform: scale(0.95);
+}
+
+#botom1{
+    color: rgb(89, 89, 211);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Arial";
+    border-radius: 3px;
+}
+
+#botom2{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Arial";
+    border-radius: 3px;
+}
+
+#botom-perfil{
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: "Arial";
+}
+
+#botom-perfil:hover{
+    background-color: #585858;
+}
+
+#botom-logout{
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: "Arial";
+}
+
+#botom-logout:hover{
+    background-color: #585858;
+}
+
+#buscador{
+    margin-left: 820px;
+    position: absolute;
+}
+
+#barra-principal{
+    padding: 10px;
+}
+
+#inicio{
+    font-size: 25px;
+    font-family: "Arial";
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.nav-link{
+    border-bottom: 2px solid transparent;
+    padding-bottom: 6px;
+}
+
+.nav-link:hover{
+    border-bottom-color: white;
+}
+
+.dropdown-menu{
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.gradient-custom-2 {
+    background-color: #444444;
+}
+
+#perfil{
+    width: 1875px;
+    margin-bottom: 280px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.custom-table-responsive th,
+.custom-table-responsive td {
+    border: 2px solid #5e5e5e; 
+    padding: 7px; 
+    text-align: center; 
+}
+
+.card{
+    border-color: #575757;  
+    border-radius: 15px;
+    color: #ffffff;
+    font-family: "Arial";
+}
+
+#subidaVideo{
+    color: #ffffff;
+    background-color: #444444;
+}
+
+#FormSubida{
+    margin-bottom: 200px;
+}
+
+.form-label{
+    font-size: 30px;
+}
+
+form .form-group input[type="text"],
+form .form-group input[type="file"],
+#EditarEmail {
+    border: 1px solid #ccc;
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-color: #444444;  
+    width: 900px;
+    text-align: center;
+}
+
+form .form-group input[type="text"]:hover,
+form .form-group input[type="file"]:hover,
+#EditarEmail:hover {
+    border-color: #adadad;
+    box-shadow: 0 0 8px rgb(78, 78, 78);
+    text-align: center;
+}
+
+.custom-textarea {
+    border: 1px solid #ccc;
+    background-color: rgb(36, 36, 36);
+    border-color: #444444;  
+    width: 900px;
+    height: 150px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    resize: none;
+    text-align: center;
+    color: #ffffff;
+}
+
+.custom-textarea:hover{
+    border-color: #adadad;
+    box-shadow: 0 0 8px rgb(78, 78, 78);
+    color: #ffffff;
+}
+
+.custom-textarea:focus{
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+}
+
+#botomSubida{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+#cuerpoFeed{
+    color: #ffffff;
+}
+
+#cardFeed{
+    background-color: #292727;
+    border-radius: 15px;
+    border: 3px solid #292727;
+    margin-left: 17px;
+}
+
+#videoFeed{
+    border-radius: 15px;
+}
+
+#footerVideo{
+    border: 0px;
+    color: #ffffff8f;
+    font-size: 18px;
+}
+
+#tituloVideo{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#usuarioVideo{
+    font-size: 18px;
+    color: #ffffff8f;
+}
+
+#tituloFeed{
+    text-align: center;
+    color: #ffffff;
+}
+
+#BotomEditarPerfil{
+    margin-top: 15px; 
+}
+
+.img-thumbnail{
+    background-color: #444444;
+    border: #444444;
+    border-radius: 20px;
+}
+
+#username_or_email{
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-color: #ffffff;
+    width: 420px;
+    margin-left: 25px;
+}
+
+#username_or_email:hover {
+    border-color: #adadad;
+    box-shadow: 0 0 8px rgb(78, 78, 78);
+}
+
+#username_or_email{
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-color: #444444;
+}
+
+#newPassword{
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-color: #ffffff;
+    width: 420px;
+    margin-left: 25px;
+}
+
+#newPassword:hover {
+    border-color: #adadad;
+    box-shadow: 0 0 8px rgb(78, 78, 78);
+}
+
+#newPassword{
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-color: #444444;
+}
+
+#confirmPassword{
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-color: #ffffff;
+    width: 420px;
+    margin-left: 25px;
+}
+
+#confirmPassword:hover {
+    border-color: #adadad;
+    box-shadow: 0 0 8px rgb(78, 78, 78);
+}
+
+#confirmPassword{
+    background-color: rgb(36, 36, 36);
+    color: #ffffff;
+    border-color: #444444;
+}
+
+#username_or_email::placeholder {
+    color: #777777; 
+}
+
+#newPassword::placeholder {
+    color: #777777; 
+}
+
+#confirmPassword::placeholder {
+    color: #777777; 
+}
+
+.messages .success {
+    margin-top: 25px;
+    margin-right: 35px;
+    color: #155724; 
+    font-size: 20px;
+    background-color: #d4edda; 
+    border: 2px solid;
+    border-color: #c3e6cb; 
+    border-radius: 6px;
+    height: 90px;
+}
+
+.messages .error {
+    margin-top: 25px;
+    margin-right: 35px;
+    color: #fa2a3f; 
+    font-size: 20px;
+    background-color: #f8c0c4; 
+    border: 2px solid;
+    border-color: #ff8d98; 
+    border-radius: 6px;
+    height: 70px;
+}
+
+#mensaje-seguir-advertencia {
+    margin-left: 250px;
+    color: #856404; 
+    font-size: 20px;
+    background-color: #fff3cd; 
+    border: 2px solid;
+    border-color: #ffeeba; 
+    border-radius: 6px;
+    height: 70px;
+    width: 200px;
+    text-align: center;
+    position: fixed;
+}
+
+#mensaje-seguir-exitoso {
+    margin-left: 250px;
+    color: #155724; 
+    font-size: 20px;
+    background-color: #d4edda; 
+    border: 2px solid;
+    border-color: #c3e6cb; 
+    border-radius: 6px;
+    height: 70px;
+    width: 230px;
+    text-align: center;
+    position: fixed;
+}
+
+#imagenActivadora{
+    border-radius: 30px;
+    margin-left: 5px;
+}
+
+#ImagenCard{
+    width: 45px; 
+    height: 45px; 
+    object-fit: cover;
+    margin-top:20px;
+    margin-left: 5px;
+    border-radius: 30px;
+}
+
+#ImagenCardPerfil{
+    width: 170px; 
+    height: 170px;
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 80px;
+}
+
+#TituloUsuario{
+    font-size: 25px;
+    margin-left: 115px;
+}
+
+#perfil_usuario{
+    width: 1880px;
+    height: 820px;
+    margin-bottom: 300px;
+}
+
+#CardPerfilUsuario{
+    background-color: #292727;
+    border-radius: 15px;
+    border: 3px solid #292727;
+    margin-left: 17px;
+    margin-top: 50px;
+}
+
+h5{
+    font-size: 30px;
+    font-weight: bold;
+}

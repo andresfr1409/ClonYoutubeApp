@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="vh-100" id="subidaVideo">
+    <div class="container-fluid py-8 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+                <div class="card bg-dark text-white" id="FormSubida">
+                    <div class="card-body p-1 text-center" >
+                        <div class="mt-md-3">
+                            <h2 class="fw-bold mb-2 text-uppercase">Editar perfil</h2>
+                            <div class="form-outline mb-4">
+                                <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="{{ form.username.id_for_label }}" class="form-label">Nombre Usuario:</label>
+                                        {{ form_usuario.username }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="{{ form.email.id_for_label  }}" class="form-label">Email:</label>
+                                        {{ form_usuario.email }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="{{ form.imagen_perfil.id_for_label }}" class="form-label">Imagen de perfil:</label>
+                                        {{ form_perfil.imagen_perfil }}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="{{ form.banner.id_for_label }}" class="form-label">Banner</label>
+                                        {{ form_perfil.banner }}
+                                    </div>
+                                    <button type="submit" class="btn btn-outline-light btn-block mb-4" id="botomSubida">Guardar Cambios</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <a href="{% url 'perfil'%}">Volver al video</a>
+{% endblock %}

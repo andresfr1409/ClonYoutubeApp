@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="vh-100 gradient-custom-2">
+    <video controls width="1890" height="730">
+        <source src="{{ video.archivo_video.url }}" type="video/mp4">
+        Tu navegador no admite la reproducción de videos.
+    </video>
+    <div class="p-3 text-white">
+        <h2>{{ video.titulo }}</h2>
+        <p>{{ video.descripcion }}</p>
+    </div>
+</section>
+{% endblock %}
