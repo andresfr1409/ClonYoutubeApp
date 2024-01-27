@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="" alt="PlayDev">
+  <img src="videos_app/static/img/Logo app videos.png" alt="PlayDev">
 </p>
 
 ## Nombre y descripcion 
