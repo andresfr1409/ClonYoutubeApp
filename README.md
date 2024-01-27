@@ -68,6 +68,45 @@ pendiente
 - Permite a los usuarios ver, editar o eliminar los videos que han subido.
 - La gestión de videos es fácil e intuitiva, brindando control total sobre el contenido compartido.
 
+4. ### Sistema de Seguimiento de Usuarios
+
+#### Relaciones de Seguimiento
+
+- Permite a los usuarios seguir a otros usuarios, estableciendo relaciones en la base de datos.
+- La funcionalidad de seguimiento mejora la interacción y la conexión entre los usuarios de la plataforma.
+
+## Tenologias Utilizadas
+
+### Django
+
+- Django se utiliza para construir la estructura de la aplicación, manejar el sistema de autenticación, gestionar relaciones en la base de datos y más.
+- Proporciona una arquitectura MVT sólida para el desarrollo rápido y eficiente.
+
+### HTML, CSS y Bootstrap
+
+- HTML y CSS se combinan con Bootstrap para crear una interfaz visualmente atractiva y receptiva.
+- Bootstrap acelera el desarrollo al proporcionar componentes y estilos predefinidos.
+
+### MySQL
+
+- MySQL se utiliza para almacenar y gestionar información, incluyendo perfiles de usuario, videos y relaciones de seguimiento.
+- Ofrece una solución eficiente y escalable para la persistencia de datos.
+
+## Instalacion
+
+1. Clonar el repositorio
+2. Configurar el entorno virtual y instalar las dependencias con el comando "pip install -r requirements.txt".
+3. Configurar la Base de Datos
+
+Cree una base de datos MySQL y configure las credenciales en el archivo settings.py en el directorio myproject/settings.py.
+
+![image](https://github.com/andresfr1409/BibliotecaDeCine/assets/138944864/d64f4f26-d464-4fe6-a33d-a51efb91e8a9)
+
+4. Ejecuta las migraciones con "python manage.py makemigrations" y despues ejecutar "python manage.py migrate".
+5. Inicia el servidor de desarrollo local con el comando "python manage.py runserver".
+
+
+
 
 
 
