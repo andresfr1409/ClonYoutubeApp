@@ -105,8 +105,44 @@ Cree una base de datos MySQL y configure las credenciales en el archivo settings
 4. Ejecuta las migraciones con "python manage.py makemigrations" y despues ejecutar "python manage.py migrate".
 5. Inicia el servidor de desarrollo local con el comando "python manage.py runserver".
 
+## Uso 
 
+1. ### Registro y Autenticación
+  
+- Inicia la aplicación y crea una cuenta utilizando la opción de registro.
+- Ingresa tu nombre de usuario, correo electrónico y contraseña.
+- Después de registrarte, puedes iniciar sesión con tu correo electrónico y contraseña.
 
+2. ### Explora el Feed de Videos
+
+- Accede a la sección de inicio para explorar el feed de videos
+- Disfruta de una variedad de contenidos subidos por otros usuarios.
+
+3. ### Busca Videos y Usuarios
+
+- Utiliza el buscador en el navbar para encontrar videos por nombre o buscar usuarios específicos.
+- La búsqueda es rápida y proporciona resultados relevantes.
+
+4. ### Gestiona Tu Perfil
+
+- Accede a la sección de tu perfil para ver y editar tu información.
+- Personaliza tu perfil agregando o cambiando fotos de perfil y banner.
+- Edita tu nombre, correo electrónico y realiza otras modificaciones según tus preferencias.
+
+5. ### Sube y Gestiona Tus Videos
+
+- En la sección de tu perfil, encuentra la opción para subir nuevos videos.
+- Proporciona el nombre y la descripción del video.
+- Gestiona tus videos existentes, editando o eliminando según sea necesario.
+
+6. ### Sistema de Seguimiento
+
+- Explora la funcionalidad de seguimiento en la sección de perfil.
+- Sigue a otros usuarios para mantenerse al tanto de sus actividades y videos.
+
+7. ### Explora Otras Funcionalidades
+
+- Explora todas las funcionalidades ofrecidas, como la recuperación de contraseña y la navegación intuitiva.
 
 
 
