@@ -126,13 +126,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'videos')
-MEDIA_URL = '/videos/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
-MEDIA_URL = '/images/'
 AUTHENTICATION_BACKENDS = ['videos_app.backends.EmailBackend']
