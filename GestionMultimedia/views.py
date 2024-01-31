@@ -15,7 +15,7 @@ def subir_video(request):
             return redirect('perfil')
     else:
         form = VideoForm()
-    return render(request, 'subir_video.html', {'form': form})
+    return render(request, 'GestionMultimedia/subir_video.html', {'form': form})
 
 @login_required
 def editar_video(request, video_id):
@@ -32,7 +32,7 @@ def editar_video(request, video_id):
         'form': form,
         'video': video,
     }
-    return render(request, 'editar_video.html', context)
+    return render(request, 'GestionMultimedia/editar_video.html', context)
 
 @login_required
 def eliminar_video(request, video_id):
@@ -42,6 +42,6 @@ def eliminar_video(request, video_id):
 
 def ver_video(request, video_id):
     video = get_object_or_404(Video, id_video=video_id)
-    return render(request, 'ver_video.html' , {'video': video})
+    return render(request, 'GestionMultimedia/ver_video.html' , {'video': video})
 
 
