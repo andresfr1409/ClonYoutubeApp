@@ -12,7 +12,7 @@ def perfil(request):
     cantidad_de_videos = videos.count()
     seguidores = Seguidor.objects.filter(seguido=usuario).count()
     seguidos = Seguidor.objects.filter(seguidor=usuario).count()
-    return render(request, 'perfil.html', {'usuario': usuario, 'videos': videos, 'seguidores': seguidores, 'cantidad_de_videos': cantidad_de_videos, 'seguidos': seguidos})
+    return render(request, 'GestionPerfiles/perfil.html', {'usuario': usuario, 'videos': videos, 'seguidores': seguidores, 'cantidad_de_videos': cantidad_de_videos, 'seguidos': seguidos})
 
 @login_required
 def editar_perfil(request):
@@ -35,7 +35,7 @@ def editar_perfil(request):
         form_usuario = UserLoginForm(instance=usuario)
         form_perfil = UserProfileEditForm(instance=usuario_personalizado)
     
-    return render(request, 'editar_perfil.html', {'form_usuario': form_usuario, 'form_perfil': form_perfil})
+    return render(request, 'GestionPerfiles/editar_perfil.html', {'form_usuario': form_usuario, 'form_perfil': form_perfil})
 
 def perfil_usuario(request, username):
     usuario = get_object_or_404(User, username=username)
@@ -43,4 +43,4 @@ def perfil_usuario(request, username):
     cantidad_de_videos = videos_usuario.count()
     seguidores = Seguidor.objects.filter(seguido=usuario).count()
     seguidos = Seguidor.objects.filter(seguidor=usuario).count()
-    return render(request, 'perfil_usuario.html', {'usuario': usuario, 'videos_usuario': videos_usuario, 'seguidores': seguidores, 'cantidad_de_videos': cantidad_de_videos, 'seguidos': seguidos})
+    return render(request, 'GestionPerfiles/perfil_usuario.html', {'usuario': usuario, 'videos_usuario': videos_usuario, 'seguidores': seguidores, 'cantidad_de_videos': cantidad_de_videos, 'seguidos': seguidos})
