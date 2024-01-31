@@ -2,25 +2,12 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.contrib import messages
-from .models import Video, Seguidor, User
-from .forms import VideoForm,VideoEditForm
+from .models import Seguidor, User
+from GestionMultimedia.models import Video
 
 def feed(request):
     videos = Video.objects.all().order_by('-fecha_subida')
     return render(request, 'feed.html', {'videos': videos})
-
-@login_required
-def subir_video(request):
-    if request.method =='POST':
-        form = VideoForm(request.POST, request.FILES)
-        if form.is_valid():
-            video = form.save(commit=False)
-            video.usuario = request.user
-            video.save()
-            return redirect('perfil')
-    else:
-        form = VideoForm()
-    return render(request, 'subir_video.html', {'form': form})
 
 def seguir_usuario(request, username):
     usuario_a_seguir = get_object_or_404(User, username=username)
@@ -46,33 +33,6 @@ def dejar_de_seguir_usuario(request, username):
     else:
         messages.warning(request, 'Debes iniciar sesión o registrarte')
     return redirect('perfil_usuario', username=username)
-
-@login_required
-def editar_video(request, video_id):
-    video = Video.objects.get(id_video=video_id)
-    if request.method == 'POST':
-        form = VideoEditForm(request.POST, instance=video)
-        if form.is_valid():
-            form.save()
-            return redirect('perfil')
-    else:
-        form = VideoEditForm(instance=video)
-    
-    context = {
-        'form': form,
-        'video': video,
-    }
-    return render(request, 'editar_video.html', context)
-
-@login_required
-def eliminar_video(request, video_id):
-    video = Video.objects.get(id_video = video_id)
-    video.delete()
-    return redirect('perfil')
-
-def ver_video(request, video_id):
-    video = get_object_or_404(Video, id_video=video_id)
-    return render(request, 'ver_video.html' , {'video': video})
 
 def buscar_videos(request):
     if request.method == 'GET':

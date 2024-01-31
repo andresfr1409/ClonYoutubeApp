@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('videos_app.urls')),
     path('autenticacion/', include('Autenticacion.urls')),
     path('gestion_perfiles/', include('GestionPerfiles.urls')),
+    path('gestion_multimedia/', include('GestionMultimedia.urls')),
 ]

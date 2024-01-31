@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'videos_app',
     'Autenticacion',
     'GestionPerfiles',
+    'GestionMultimedia',
 ]
 
 MIDDLEWARE = [
