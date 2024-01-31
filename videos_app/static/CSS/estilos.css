@@ -135,6 +135,7 @@
 
 #barra-principal{
     padding: 10px;
+    background-color: #181822;
 }
 
 #inicio{
@@ -461,9 +462,7 @@ h5{
     font-weight: bold;
 }
 
-#TituloApp{
-    font-weight: bold;
-    font-size: 30px;
-    color: #7ca5ff;
-    font-family: "Verdana Pro Black";
+.footer {
+    background-color: #181822;
+    color: #ffffff;
 }
