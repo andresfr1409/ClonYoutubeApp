@@ -1,5 +1,8 @@
-.gradient-custom-3 {
-    background: #3f3f3f;
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.315)), url("../img/imagen_fondo.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .gradient-custom-4 {
@@ -40,10 +43,6 @@
     font-family: 'Arial';
 }
 
-.gradient-custom {
-    background: #3f3f3f;
-    }
-
 #user.custom-input{
     padding: 8px;
     border: 2px solid #ccc;
@@ -59,7 +58,7 @@
 }
 
 #login{
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(46, 45, 63);
     color: #ffffff;
     border-color: #ffffff;
     width: 420px;
@@ -71,7 +70,7 @@
 }
 
 #login{
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(29, 26, 44);
     color: #ffffff;
     border-color: #444444;
 }
@@ -131,7 +130,7 @@
 
 #barra-principal{
     padding: 10px;
-    background-color: #181822;
+    background-color: #262636;
 }
 
 #inicio{
@@ -153,10 +152,6 @@
 .dropdown-menu{
     background-color: #444444;
     color: #ffffff;
-}
-
-.gradient-custom-2 {
-    background-color: #444444;
 }
 
 #perfil{
@@ -459,6 +454,6 @@ h5{
 }
 
 .footer {
-    background-color: #181822;
+    background-color: #262636;
     color: #ffffff;
 }
