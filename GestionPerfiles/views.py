@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from GestionPerfiles.models import CustomUser, User
-from videos_app.models import Seguidor
+from SistemaSeguidores.models import Seguidor
 from GestionMultimedia.models import Video
 from .forms import UserLoginForm, UserProfileEditForm
 
