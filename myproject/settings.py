@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Autenticacion',
     'GestionPerfiles',
     'GestionMultimedia',
+    'SistemaSeguidores',
 ]
 
 MIDDLEWARE = [
