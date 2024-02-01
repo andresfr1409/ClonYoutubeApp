@@ -1,3 +1,4 @@
 from django.contrib import admin
+from SistemaSeguidores.models import Seguidor
 
-# Register your models here.
+admin.site.register(Seguidor)
