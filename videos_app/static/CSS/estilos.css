@@ -285,72 +285,7 @@ form .form-group input[type="file"]:hover,
     border-radius: 20px;
 }
 
-#username_or_email{
-    background-color: rgb(36, 36, 36);
-    color: #ffffff;
-    border-color: #ffffff;
-    width: 420px;
-    margin-left: 25px;
-}
-
-#username_or_email:hover {
-    border-color: #adadad;
-    box-shadow: 0 0 8px rgb(78, 78, 78);
-}
-
-#username_or_email{
-    background-color: rgb(36, 36, 36);
-    color: #ffffff;
-    border-color: #444444;
-}
-
-#newPassword{
-    background-color: rgb(36, 36, 36);
-    color: #ffffff;
-    border-color: #ffffff;
-    width: 420px;
-    margin-left: 25px;
-}
-
-#newPassword:hover {
-    border-color: #adadad;
-    box-shadow: 0 0 8px rgb(78, 78, 78);
-}
-
-#newPassword{
-    background-color: rgb(36, 36, 36);
-    color: #ffffff;
-    border-color: #444444;
-}
-
-#confirmPassword{
-    background-color: rgb(36, 36, 36);
-    color: #ffffff;
-    border-color: #ffffff;
-    width: 420px;
-    margin-left: 25px;
-}
-
-#confirmPassword:hover {
-    border-color: #adadad;
-    box-shadow: 0 0 8px rgb(78, 78, 78);
-}
-
-#confirmPassword{
-    background-color: rgb(36, 36, 36);
-    color: #ffffff;
-    border-color: #444444;
-}
-
-#username_or_email::placeholder {
-    color: #777777; 
-}
-
-#newPassword::placeholder {
-    color: #777777; 
-}
-
-#confirmPassword::placeholder {
+#login::placeholder {
     color: #777777; 
 }
 
