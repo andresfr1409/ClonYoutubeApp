@@ -6,7 +6,9 @@ class VideoForm(forms.ModelForm):
         model = Video   
         fields = ['titulo', 'descripcion', 'archivo_video']
         widgets = {
-            'descripcion': forms.Textarea(attrs={'class': 'form-control custom-textarea'}),
+            'titulo': forms.TextInput(attrs={'class': 'form-control custom-input', 'id': 'FormVideo','placeholder': 'Ingresa el título'}),
+            'descripcion': forms.Textarea(attrs={'class': 'form-control custom-textarea', 'id': 'FormVideo', 'placeholder': 'Ingresa la descripción'}),
+            'archivo_video': forms.ClearableFileInput(attrs={'class': 'form-control custom-file-input', 'id': 'FormVideo'}),
         }
 
 class VideoEditForm(forms.ModelForm):
@@ -14,5 +16,6 @@ class VideoEditForm(forms.ModelForm):
         model = Video   
         fields = ['titulo', 'descripcion']
         widgets = {
-            'descripcion': forms.Textarea(attrs={'class': 'form-control custom-textarea'}),
+            'titulo': forms.TextInput(attrs={'class': 'form-control custom-input', 'id': 'FormVideo','placeholder': 'Ingresa el título'}),
+            'descripcion': forms.Textarea(attrs={'class': 'form-control custom-textarea', 'id': 'FormVideo', 'placeholder': 'Ingresa la descripción'}),
         }

@@ -8,11 +8,11 @@
 <section class="vh-100">
     <div class="container-fluid py-8 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card bg-custom text-white" id="FormSubida">
                     <div class="card-body p-1 text-center" >
                         <div class="mt-md-3">
-                            <h2 class="fw-bold mb-2 text-uppercase">formulario subida de video</h2>
+                            <h2 class="fw-bold mb-2 text-uppercase">Subir un video</h2>
                             <div class="form-outline mb-4">
                                 <form method="post" enctype="multipart/form-data">
                                     {% csrf_token %}
@@ -31,7 +31,6 @@
                                     <button type="submit" class="btn btn-outline-light btn-block mb-4" id="botomSubida">Subir Video</button>
                                 </form>
                             </div>
-                            </form>
                         </div>
                     </div>
                 </div>

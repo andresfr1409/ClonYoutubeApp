@@ -184,6 +184,29 @@ body{
     background-color:#262636;
 }
 
+#FormVideo{
+    background-color: rgb(46, 45, 63);
+    color: #ffffff;
+    border-color: #ffffff;
+    width: 650px;
+    margin: auto;
+}
+
+#FormVideo:hover {
+    border-color: #adadad;
+    box-shadow: 0 0 8px rgb(78, 78, 78);
+}
+
+#FormVideo{
+    background-color: rgb(29, 26, 44);
+    color: #ffffff;
+    border-color: #444444;
+}
+
+#FormVideo::placeholder {
+    color: #777777; 
+}
+
 .form-label{
     font-size: 30px;
 }
