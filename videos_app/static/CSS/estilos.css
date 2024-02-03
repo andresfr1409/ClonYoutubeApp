@@ -190,6 +190,7 @@ body{
     border-color: #ffffff;
     width: 650px;
     margin: auto;
+    text-align: center;
 }
 
 #FormVideo:hover {
@@ -207,27 +208,33 @@ body{
     color: #777777; 
 }
 
-.form-label{
-    font-size: 30px;
-}
-
-form .form-group input[type="text"],
-form .form-group input[type="file"],
-#EditarEmail {
-    border: 1px solid #ccc;
-    background-color: rgb(36, 36, 36);
+#FormPerfil{
+    background-color: rgb(46, 45, 63);
     color: #ffffff;
-    border-color: #444444;  
-    width: 900px;
+    border-color: #ffffff;
+    width: 500px;
+    margin: auto;
     text-align: center;
 }
 
-form .form-group input[type="text"]:hover,
-form .form-group input[type="file"]:hover,
-#EditarEmail:hover {
+#FormPerfil:hover {
     border-color: #adadad;
     box-shadow: 0 0 8px rgb(78, 78, 78);
-    text-align: center;
+}
+
+#FormPerfil{
+    background-color: rgb(29, 26, 44);
+    color: #ffffff;
+    border-color: #444444;
+}
+
+#FormPerfil::placeholder {
+    color: #777777; 
+}
+
+
+.form-label{
+    font-size: 30px;
 }
 
 .custom-textarea {
