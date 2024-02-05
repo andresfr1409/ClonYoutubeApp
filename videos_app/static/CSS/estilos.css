@@ -157,6 +157,7 @@ body{
 #perfil{
     width: 1875px;
     margin-bottom: 280px;
+    background-color: rgb(29, 26, 44);
 }
 
 .table-responsive {

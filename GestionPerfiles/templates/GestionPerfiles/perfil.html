@@ -9,7 +9,7 @@
     <div class="container-fluid py-8 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col col-lg-20 col-xl-18">
-                <div class="card bg-dark" id="perfil" >
+                <div class="card bg-custom" id="perfil" >
                     <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height:230px;z-index: 1;position: relative">
                         {% if usuario.customuser.banner %}
                             <img src="{{ usuario.customuser.banner.url }}" 
@@ -67,7 +67,7 @@
                             </p>
                         </div>
                         <div class="row g-2" >
-                            <div class="card bg-dark">
+                            <div class="card bg-custom" style="background-color:rgb(46, 45, 63)">
                                 <div class="card-body">
                                     <h4 class="card-title">Mis Videos</h4>
                                     <table class="table-responsive custom-table-responsive">
