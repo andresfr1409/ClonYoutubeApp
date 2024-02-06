@@ -48,7 +48,7 @@
                     <div class="d-flex align-items-center">
                         {% if user.is_authenticated %}
                         <div class="btn-group dropstart">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <button type="button" class="btn btn-custom dropdown-toggle" id="dropdownPerfil" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                                 {% if usuario.customuser.imagen_perfil %}
                                     <img src="{{ usuario.customuser.imagen_perfil.url }}" 
                                     alt="Imagen" 
@@ -71,7 +71,7 @@
                                     aria-expanded="false">
                                 {% endif %}
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" style="background-color: rgb(29, 26, 44)">
                                 <li><a class="dropdown-item" href="{% url 'perfil' %}" id="botom-perfil">Mi Perfil</a></li>
                                 <li><a class="dropdown-item" href="{% url 'logout' %}" id="botom-logout">Cerrar sesion</a></li>
                             </ul>
