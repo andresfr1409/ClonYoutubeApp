@@ -1,10 +1,11 @@
-from django.shortcuts import render
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate, get_user_model
-from django.db.models import Q
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
+from django.core.mail import send_mail
 from Autenticacion.forms import RegistroForm, LoginForm
+import random
 
 def registro(request):
     if request.method == 'POST':
@@ -35,23 +36,25 @@ def iniciar_sesion(request):
         form = LoginForm()
     return render(request, 'Autenticacion/login/inicio_sesion.html', {'form': form})
 
-def restablecer_contraseña(request):
-    User = get_user_model()
+def enviar_codigo(request):
     if request.method == 'POST':
-        username_or_email = request.POST['username_or_email']
-        new_password = request.POST['new_password']
-        confirm_password = request.POST['confirm_password']
-        try:
-            user = User.objects.get(Q(username=username_or_email) | Q(email=username_or_email))
-        except User.DoesNotExist:
-            messages.error(request, 'Usuario no encontrado, Intentalo nuevamente .')
-            return redirect('restablecer_contraseña')
-        if new_password != confirm_password:
-            messages.error(request, 'Las contraseñas no coinciden, Intentalo nuevamente.')
-            return redirect('restablecer_contraseña')
-        # Cambiar la contraseña del usuario
-        user.password = make_password(new_password)
-        user.save()
-        messages.success(request, 'La contraseña se cambió con éxito. Ahora puedes iniciar sesión con tu nueva contraseña.')
-        return redirect('restablecer_contraseña')
-    return render(request, 'Autenticacion/login/restablecer_contraseña.html')
+        email = request.POST.get('email')
+        user = User.objects.filter(email=email).first()
+        if user:
+            # Generar codigo aleatorio de 4 digitos
+            codigo = ''.join(random.choices('0123456789', k=4))
+            # Guardar el codigo en la sesion del usuario
+            request.session['codigo_verificacion'] = codigo
+            request.session['email'] = email
+            # Envia el codigo al correo electronico del usuario
+            send_mail(
+                'Codigo de verificacion para restablecer contraseña',
+                f'Tu codigo de verificacion es: {codigo}',
+                'feliperin14@gmail.com',
+                [email],
+                fail_silently= False,
+            )
+            return redirect('ingresar_codigo')
+        else:
+            messages.error(request, 'El correo electronico proporcionado no esta registrado')
+    return render(request, 'Autenticacion/login/enviar_codigo.html')
