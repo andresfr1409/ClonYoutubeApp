@@ -91,3 +91,22 @@ def ingresar_codigo(request):
         else:
             messages.error(request, 'El codigo ingresado no es valido')
     return render(request, 'Autenticacion/login/ingresar_codigo.html')
+
+def cambiar_contraseña(request):
+    if request.method == 'POST':
+        nueva_contraseña = request.POST.get('nueva_contraseña')
+        confirmar_contraseña = request.POST.get('confirmar contraseña')
+        if nueva_contraseña == confirmar_contraseña:
+            # cambiar contraseña del usuario y encriptarla 
+            email = request.session.get('email')
+            user = User.objects.get(email=email)
+            user.password = make_password(nueva_contraseña)
+            user.save()
+            # Eliminar datos de sesion relacionados con el codigo de verificacion
+            del request.session['codigo_verificacion']
+            del request.session['email']
+            messages.success(request, 'La contraseña se cambió con éxito. Ahora puedes iniciar sesión con tu nueva contraseña.')
+            return redirect('cambiar_contraseña')
+        else:
+            messages.error(request, 'Las contraseña no coinciden. Intentalo nuevamente')
+    return render(request, 'cambiar_contraseña.html')
