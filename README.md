@@ -12,8 +12,26 @@ PlayDev es una aplicación web desarrollada con Django, HTML, CSS, Bootstrap y M
 
 ## Capturas de Pantalla
 
-pendiente
+1. ### Seccion de inicio
 
+1. #### Feed de Videos
+
+![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/4a2f435e-20c1-4e67-88ed-795ffb20d6cd)
+
+2. #### Buscador
+
+![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/8946dad7-b5e6-41f1-82e8-6f44b2c155f3)
+
+3 #### Perfil 
+
+![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/e313c56d-714a-405e-a429-612755e72ce7)
+
+2. ### Seccion de Inicio de sesion
+
+
+
+
+ 
 ## Funcionalidades Principales
 
 1. ### Sección de Inicio
