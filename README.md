@@ -12,26 +12,42 @@ PlayDev es una aplicación web desarrollada con Django, HTML, CSS, Bootstrap y M
 
 ## Capturas de Pantalla
 
-1. ### Seccion de inicio
-
-1. #### Feed de Videos
+1. ### Feed de Videos
 
 ![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/4a2f435e-20c1-4e67-88ed-795ffb20d6cd)
 
-2. #### Buscador
+2. ### Buscador
 
 ![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/8946dad7-b5e6-41f1-82e8-6f44b2c155f3)
 
-3 #### Perfil 
+3 ### Perfil 
 
 ![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/e313c56d-714a-405e-a429-612755e72ce7)
 
-2. ### Seccion de Inicio de sesion
+4. ### Seccion de Registro
+
+![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/6aa9b4f0-25f3-4a00-9bd0-fd2ee9c9743e)
+
+5. ### Seccion de Inicio de sesion 
+
+![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/04897960-70c8-4f55-a99a-2e91008be6d1)
+
+6. ### Seccion de Recuperacion de contraseña
+
+![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/03a58057-f437-494d-ae08-429f3e152fa3)
+
+7. ### Seccion de Mi perfil
+
+![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/d97c1199-8724-4a82-8bb6-c90e0b7fc35e)
+
+8. ### Editar de perfil
+
+![image](https://github.com/andresfr1409/ClonYoutubeApp/assets/138944864/5c4ba1c8-6243-4d39-8acb-23d5c21fcfbb)
+
+9. ### Subida de videos
 
 
 
-
- 
 ## Funcionalidades Principales
 
 1. ### Sección de Inicio
